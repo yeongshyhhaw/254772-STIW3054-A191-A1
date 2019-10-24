@@ -25,8 +25,12 @@ class Data {
     }
     public Data(String column1, String column2) {
 
-        this.matric = column1;
-        this.name = column2;
+        this.name= column1;
+        this.matric = column2;
+    }
+    public Data(String column1) {
+
+        this.name = column1;
     }
 
     public int getNum() {
