@@ -35,3 +35,8 @@ Output---
 ![Capture4](https://user-images.githubusercontent.com/47937370/67483107-a594d580-f697-11e9-9730-38a9622350ab.PNG)
 ![Capture5](https://user-images.githubusercontent.com/47937370/67483116-ab8ab680-f697-11e9-8f85-a4d3603d7c2e.PNG)
 ![Capture6](https://user-images.githubusercontent.com/47937370/67483118-ac234d00-f697-11e9-877f-db5866b57d75.PNG)
+
+
+class diagram
+
+![c](https://user-images.githubusercontent.com/47937370/67489105-9025a880-f6a3-11e9-8d8e-d40140605d69.PNG)
