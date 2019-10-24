@@ -12,7 +12,7 @@ public class Excel {
     private static final String[] columns = {"Name", "Matric","Github-Link"};
     private static final String[] column = {"Name", "Matric"};
 
-    public void WriteToExcel(ArrayList<Data> data, ArrayList<Data> data2) throws IOException {
+    public void WriteToExcel(ArrayList<Data> studsub, ArrayList<Data> studnotsub) throws IOException {
 
         // Create a Workbook
         Workbook workbook = new XSSFWorkbook();
@@ -60,20 +60,20 @@ public class Excel {
 
         // Print data to row
         int rowNum = 1;
-        for (Data data1 : data) {
+        for (Data Data1 : studsub) {
             Row row = sheet.createRow(rowNum++);
 
 
             Cell column2 = row.createCell(0);
-            column2.setCellValue(data1.getName());
+            column2.setCellValue(Data1.getName());
             column2.setCellStyle(cellStyle);
 
             Cell column3 = row.createCell(1);
-            column3.setCellValue(data1.getMatric());
+            column3.setCellValue(Data1.getMatric());
             column3.setCellStyle(cellStyle);
 
             Cell column4 = row.createCell(2);
-            column4.setCellValue(data1.getLink());
+            column4.setCellValue(Data1.getLink());
             column4.setCellStyle(cellStyle);
 
         }
@@ -89,20 +89,29 @@ public class Excel {
         }
         rowNum=rowNum+1;
 
-        for (Data data3 : data2) {
+        for (Data Data2 : studnotsub) {
             Row row = sheet.createRow(rowNum++);
-
-
             Cell column2 = row.createCell(0);
-            column2.setCellValue(data3.getName());
+            column2.setCellValue(Data2.getName());
             column2.setCellStyle(cellStyle);
 
             Cell column3 = row.createCell(1);
-            column3.setCellValue(data3.getMatric());
+            column3.setCellValue(Data2.getMatric());
             column3.setCellStyle(cellStyle);
 
 
         }
+        rowNum=rowNum+2;
+        // title
+        for (int i = 0; i < column.length; i++) {
+            Cell cell = headerRow2.createCell(i);
+            cell.setCellValue(column[i]);
+            cell.setCellStyle(headerCellStyle);
+
+
+        }
+
+
 
         // Resize all columns to fit the content size
         for (int i = 0; i < columns.length; i++) {
